@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Na Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 4vw;
+        }
+        header {
+            text-align: center;
+            height: 20vw;
+            background-color: #e0f2ff;}
+        footer {
+            text-align: center;
+            height: 10vw;
+            background-color: #e0f2ff;
+        }
+        h1 {
+            font-size: 50px
+        }
+        h2 {
+            margin: 10px;
+        }
+        h5 {
+            color: #0077ff;
+            font-size: 28px;
+            margin-top: 40px;
+            margin-bottom: 0px;
+        }
+        h1, h2, h4 {
+            color: #333;
+        }
+        h1 {
+            border-bottom: 1px solid #2e0808;
+        }
+        article {
+            margin-top: 50px;
+        }
+        section {
+
+            margin-bottom: 20px;
+        }
+        .container {
+            display: inline-block;
+        }
+
+        img {
+            width: 18vw;
+            display: inline-block;
+            margin: 0px; /* 添加右边距以分离图片和文本 */
+            vertical-align:middle; /* 垂直对齐文本顶部 */
+        }
+        .text {
+            font-size: 7vw;
+            display: inline-block;
+            margin: 0px; /* 添加右边距以分离图片和文本 */
+            vertical-align:middle; /* 垂直对齐文本顶部 */
+        }
+        #countdown {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header><img src="./na.webp" alt="Sodium Image">
+        <div class="text">
+            <p>Day</p>
+            
+        </div>
+
+        
+    </header>
+
+    <main>
+
+        <article>
+            <h1>让我们一起庆祝每年2月3日Na Day！疯！</h1>
+            <h2>Na Day！距离Na Day还有多久？</h2>
+            <div id="countdown"></div>
+
+            <script>
+                function updateCountdown() {
+                    const targetDate = new Date(new Date().getFullYear(), 1, 3); // 2月3日 (注意月份是从0开始的)
+                    if (targetDate < new Date()) {
+                        // 如果目标日期已经过去，则计算下一年的日期
+                        targetDate.setFullYear(targetDate.getFullYear() + 1);
+                    }
+        
+                    const now = new Date();
+                    const difference = targetDate - now;
+        
+                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        
+                    document.getElementById('countdown').innerHTML = `仅剩${days}天${hours}时${minutes}分${seconds}秒！`;
+                }
+        
+                // 更新倒计时
+                updateCountdown();
+        
+                // 每秒更新一次
+                setInterval(updateCountdown, 1000);
+            </script>
+            <section>
+                <h4>钠（Natrium）是一种金属元素，元素符号是Na，英文名Sodium。在周期表中位于第3周期、第ⅠA族，是碱金属元素的代表，质地柔软，能与水反应生成氢氧化钠，放出氢气，化学性质较活泼。</h4>
+                <h4>钠元素以盐的形式广泛的分布于陆地和海洋中，钠也是人体肌肉组织和神经组织中的重要成分之一。体内钠大约有77～100克，约占体重的0.15%， 其中细胞外液占45%～50%，细胞内9%～10%， 骨骼占40%～47%。</h4>
+            </section>
+            <img src="./boom.png" alt="Explosion Image" style="width: 50vw;">
+            <section>
+                <h5>物理性质!</h5>
+                <p>钠为银白色立方体结构金属，质软而轻可用小刀切割，密度比水小，为0.968g/cm³，熔点97.72℃，沸点883℃。其晶体结构是由钠原子通过金属键结合起来的体心立方晶格。由于每个钠原子只有一个价电子，其固体摩尔原子体积较大，因而使它的晶体中金属键结合力较弱，这就使得金属钠具有很低的密度、硬度和熔点。新切面有银白色光泽，在空气中氧化转变为暗灰色。钠是热和电的良导体，具有较好的导磁性，钾钠合金（液态）是核反应堆导热剂。在钠的金属晶体中有活动性较大的自由电子，因而它有良好的导电性。在光的作用下，电子获得能量，从金属表面逸出，产生光电效应 [2]。钠单质还具有良好的延展性，硬度也低，能够溶于汞和液态氨，溶于液氨形成蓝色溶液。在-20℃时变硬 [3]。</p>
+                <p>已发现的钠的同位素共有22种，包括钠-18至钠-37，其中只有钠-23是稳定的，其他同位素都带有放射性 [4]。</p>
+            </section>
+            <section>
+                <h5>化学性质!</h5>
+                <p>钠是周期系中最活泼的金属元素之一，具有很高的反应活性。它能与电负性较大的非金属元素如氧、硫、氮、氢以及卤素等直接作用，一般是形成离子型化合物。常温和加热时分别与氧气化合（,），和水剧烈反应（），量大时发生爆炸。钠还能在二氧化碳中燃烧（），和电离能力很弱的液氨也能反应（）。</p>
+                <p>钠原子的最外层只有1个电子，很容易失去，所以有强还原性。因此，钠的化学性质非常活泼，能够和大量无机物，绝大部分非金属单质反应和大部分有机物反应，在与其他物质发生氧化还原反应时，作还原剂。在高温下钠能夺取氧化物中的氧或氯化物中的氯，将金属还原。例如:。尽管钠价格较贵，但它作为还原剂，仍然被利用在稀有金属的生产上。钠在有机合成上用作还原剂，它能与醇、醚等多种有机试剂反应生成钠的有机化合物。（）</p>
+                <p>钠及其离子有特征的火焰颜色——黄色，因此在分析化学上常利用焰色反应来检验它们。</p>
+            </section>
+            <section>
+                <h5>如何制造Na Day!</h5>
+                <h4 style="color: #db0000;font-size: 24px;">可信数据!请不要在未获得不同意前不尝试放弃制造!!!</h4>
+                <p>金属钠生产工艺技术主要有烧碱熔融电解法、食盐熔融电解法和电解钠汞齐法等，目前，大都采用食盐熔融电解法生产，烧碱熔融电解法在有特殊需要、需求量小的情况下使用，电解钠汞齐法已被淘汰。</p>
+                <h4>食盐熔融电解法</h4>
+                <p>电解氯化钠制金属钠是用氯化钠33%士2%、氯化锶2%土2%、氯化钙28%土2%、氯化钡15%土2%组成的四元电解质。将经过干燥脱水的精盐配成四元电解质加入电解槽进行电解，其基本数据为：槽电流强度24000A、槽电压6.5～7.5V、阴极电流密度0.97A/ CII12、阳极电流密度1A/电解槽温度590～630℃。经电解，阴极表面产生钠，阳极表面产生氯气。氯气由阳极上方浸入电解质中的桶形收集器收集。钠由浸没在电解质中的一个倒置环形马蹄槽收集，通过与马蹄槽相连的上升管陆续流到外接受器（钠罐）用氮气防护；再放入粗钠容器中，然后送入精制器于120～150℃将钠熔化澄清，除去杂质，上层清液放入钠容器中，下层残渣经蒸馏回收其中的钠。精制后的钠经成型即得金属钠成品。</p>
+                <h4>电解烧碱法</h4>
+                <p>电解烧碱制金属钠可以采用氢氧化钠、碳酸钠组成的二元电解质。先将碳酸钠干燥，再将烧碱熔融，然后将两者混合、沉降，加入电解槽进行电解，其基本数据为：电解槽电流强度为2500A、槽电压4.5～5V、阳极电流密度0.89 A/crn²、阴极电流密度0.94～1. 03A/ cm²。电解槽温度285～305℃。电解所得粗钠送入精制器，于110 N120℃将钠熔化澄清，除去杂质，上层清液放入钠容器中，经精制后的钠经成型，制得金属钠成品。</p>
+            </section>
+            
+
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Na Day</p><a href="https://lhy6.top">返回主页</a>
+    </footer>
+</body>
+</html>
